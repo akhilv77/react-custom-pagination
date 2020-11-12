@@ -3,6 +3,7 @@
   "version": "1.1.2",
   "description": "a simple and responsive pagination for react js",
   "main": "./build/index.js",
+  "repository": "https://github.com/akhilv77/react-custom-pagination",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
