@@ -1,7 +1,7 @@
 {
   "name": "react-custom-pagination",
-  "version": "1.0.0",
-  "description": "a simple and responsive pagination",
+  "version": "1.1.2",
+  "description": "a simple and responsive pagination for react js",
   "main": "./build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,7 +18,8 @@
     "react-js-pagination",
     "reactjs-pagination",
     "custom-pagination",
-    "react-custom-pagination"
+    "react-custom-pagination",
+    "custom-react-pagination"
   ],
   "author": "Akhil Varma Gadiraju",
   "license": "ISC",
