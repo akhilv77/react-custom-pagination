@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+export const Pagination = ({
+  totalPosts,
+  postsPerPage,
+  paginate,
+  color,
+  bgColor,
+  boxHeight,
+  boxWidth,
+  justify,
+}) => {
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: justify ? justify : "space-evenly",
+      }}
+    >
+      {pageNumbers.map((number) => {
+        return (
+          <div
+            onClick={() => paginate(number)}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: color ? color : "white",
+              backgroundColor: bgColor ? bgColor : "skyblue",
+              width: boxWidth ? boxWidth : "40px",
+              height: boxHeight ? boxHeight : "40px",
+              cursor: "pointer",
+            }}
+          >
+            {number}
+          </div>
+        );
+      })}
     </div>
   );
-}
-
-export default App;
+};
