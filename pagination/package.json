@@ -1,6 +1,6 @@
 {
   "name": "react-custom-pagination",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "description": "a simple and responsive pagination for react js",
   "main": "./build/index.js",
   "repository": "https://github.com/akhilv77/react-custom-pagination",
