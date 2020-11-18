@@ -20,8 +20,8 @@ Get Responsive and yet simple pagination for React .
 
 # import
 
-```
-import Pagination from "react-custom-pagination";
+```bash
+import { Pagination } from "react-custom-pagination";
 ```
 
 # usage
@@ -70,7 +70,7 @@ import Pagination from "react-custom-pagination";
 ```
 import React, { useState } from "react";
 import "./App.css";
-import  Pagination  from "react-custom-pagination";
+import { Pagination } from "react-custom-pagination";
 
 const App = () => {
   const posts = [
