@@ -1,6 +1,6 @@
 {
   "name": "react-custom-pagination",
-  "version": "1.2.3",
+  "version": "1.3.1",
   "description": "a simple and responsive pagination for react js",
   "main": "./build/index.js",
   "repository": "https://github.com/akhilv77/react-custom-pagination",
@@ -8,7 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "keywords": [
     "react-pagination",
     "react-simple-pagination",

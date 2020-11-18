@@ -172,25 +172,29 @@ export default App;
 
 # props
 
-| Name         | Required | Type          | Default   |
-| ------------ | -------- | ------------- | --------- |
-| totalPosts   | Yes      | Number        | ---       |
-| postsPerPage | Yes      | Number        | ---       |
-| paginate     | Yes      | function      | ---       |
-| color        | No       | String        | "white"   |
-| bgColor      | No       | String        | "skyblue" |
-| boxHeight    | No       | String,Number | "40px"    |
-| boxWidth     | No       | String,Number | "40px"    |
-| justify      | No       | String        | "center"  |
+| Name         | Required | Type          | Default   | Description                                              |
+| ------------ | -------- | ------------- | --------- | -------------------------------------------------------- |
+| totalPosts   | Yes      | Number        | ---       | total no of posts                                        |
+| postsPerPage | Yes      | Number        | ---       | no of posts per page                                     |
+| paginate     | Yes      | function      | ---       | this function will execute when click on paginate number |
+| view         | No       | Number        | 5         | no of paginates                                          |
+| color        | No       | String        | "white"   | color of the text                                        |
+| bgColor      | No       | String        | "skyblue" | background color                                         |
+| boxHeight    | No       | String,Number | "40px"    | height                                                   |
+| boxWidth     | No       | String,Number | "40px"    | width                                                    |
+| borderRadius | No       | String        | "50%"     | border-radius                                            |
+| justify      | No       | String        | "center"  | justify-content                                          |
 
-bgColor ------> background color
+# optional props
 
-boxHeight ------> height
+```
+//view
+<Pagination
+    view={5}           //no of paginates
+ />
 
-boxWidth ---------> width
-
-justify -------------> justify
+```
 
 ## License
 
-MIT © [akhilv77](https://github.com/akhilv77)
+ISC © [akhilv77](https://github.com/akhilv77)
