@@ -7,8 +7,8 @@ export const Pagination = (props) => {
   }
 
   const [number, setNumber] = useState(0);
-
   const [items, setItem] = useState(5);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     setItem(props.view ? props.view : 5);
@@ -19,6 +19,11 @@ export const Pagination = (props) => {
   };
   const onPrevious = () => {
     setNumber(number - 1);
+  };
+
+  const onClickPaginate = (num) => {
+    props.paginate(num);
+    setPage(num);
   };
 
   let max = Math.ceil(pageNumbers.length / items);
@@ -35,12 +40,22 @@ export const Pagination = (props) => {
     borderRadius: props.boxRadius ? props.boxRadius : "50%",
   };
 
+  const selectStyles = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    color: props.color ? props.color : "white",
+    backgroundColor: props.selectColor ? props.selectColor : "gray",
+    width: props.boxWidth ? props.boxWidth : "40px",
+    height: props.boxHeight ? props.boxHeight : "40px",
+    cursor: "pointer",
+    borderRadius: props.boxRadius ? props.boxRadius : "50%",
+  };
+
   const mainStyles = {
     display: "flex",
     justifyContent: props.justify ? props.justify : "space-evenly",
   };
-
-  console.log(items);
 
   return (
     <div style={mainStyles}>
@@ -49,19 +64,25 @@ export const Pagination = (props) => {
           {"<<"}
         </div>
       ) : undefined}
-      {pageNumbers
-        .slice(number * items, number * items + items)
-        .map((number) => {
-          return (
-            <div
-              key={number}
-              onClick={() => props.paginate(number)}
-              style={spanStyles}
-            >
-              {number}
-            </div>
-          );
-        })}
+      {pageNumbers.slice(number * items, number * items + items).map((num) => {
+        return num === page ? (
+          <div
+            key={num}
+            onClick={() => onClickPaginate(num)}
+            style={selectStyles}
+          >
+            {num}
+          </div>
+        ) : (
+          <div
+            key={num}
+            onClick={() => onClickPaginate(num)}
+            style={spanStyles}
+          >
+            {num}
+          </div>
+        );
+      })}
       {number !== max - 1 ? (
         <div onClick={() => onNext()} style={spanStyles}>
           {">>"}

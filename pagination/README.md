@@ -180,6 +180,7 @@ export default App;
 | view         | No       | Number        | 5         | no of paginates                                          |
 | color        | No       | String        | "white"   | color of the text                                        |
 | bgColor      | No       | String        | "skyblue" | background color                                         |
+| selectColor  | No       | String        | "grey"    | background color when selected                           |
 | boxHeight    | No       | String,Number | "40px"    | height                                                   |
 | boxWidth     | No       | String,Number | "40px"    | width                                                    |
 | borderRadius | No       | String        | "50%"     | border-radius                                            |

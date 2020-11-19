@@ -180,9 +180,10 @@ export default App;
 | view         | No       | Number        | 5         | no of paginates                                          |
 | color        | No       | String        | "white"   | color of the text                                        |
 | bgColor      | No       | String        | "skyblue" | background color                                         |
-| boxHeight    | No       | String,Number | "40px"    | height of the paginate div                               |
-| boxWidth     | No       | String,Number | "40px"    | width of the paginate div                                |
-| borderRadius | No       | String        | "50%"     | border - radius of the paginate div                      |
+| selectColor  | No       | String        | "grey"    | background color when selected                           |
+| boxHeight    | No       | String,Number | "40px"    | height                                                   |
+| boxWidth     | No       | String,Number | "40px"    | width                                                    |
+| borderRadius | No       | String        | "50%"     | border-radius                                            |
 | justify      | No       | String        | "center"  | justify-content                                          |
 
 # optional props
