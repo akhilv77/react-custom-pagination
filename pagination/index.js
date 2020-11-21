@@ -57,7 +57,7 @@ export const Pagination = (props) => {
     ...spanStyles,
     width: "auto",
     cursor: "pointer",
-    borderRadius: props.boxRadius ? props.boxRadius : "5%",
+    borderRadius:props.indexBorderRadius?props.indexBorderRadius:"5%",
     padding: "0 5px",
   };
   const indexStyles = {

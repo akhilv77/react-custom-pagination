@@ -72,7 +72,7 @@ import { Pagination } from "react-custom-pagination";
 ```
 import React, { useState } from "react";
 import "./App.css";
-import { Pagination } from "./Pagination";
+import { Pagination } from "react-custom-pagination";
 
 const App = () => {
   const posts = [
@@ -209,7 +209,8 @@ export default App;
 | selectColor  | No       | String        | "grey"    | background color when selected                           |
 | boxHeight    | No       | String,Number | "40px"    | height                                                   |
 | boxWidth     | No       | String,Number | "40px"    | width                                                    |
-| borderRadius | No       | String        | "50%"     | border-radius                                            |
+| boxRadius | No       | String        | "50%"     | border-radius                                            |
+| indexBorderRadius | No       | String        | "5%"     | border-radius of index tab                          |
 | justify      | No       | String        | "center"  | justify-content                                          |
 
 # optional props
