@@ -24,6 +24,8 @@ Get Responsive and yet simple pagination for React .
 import { Pagination } from "react-custom-pagination";
 ```
 
+![pagination](https://user-images.githubusercontent.com/56865356/99876094-82ca4d00-2c1a-11eb-96e5-5fb89d197784.gif)
+
 # usage
 
 ```
