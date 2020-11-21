@@ -77,7 +77,7 @@ export const Pagination = (props) => {
     <div style={mainStyles}>
       {props.showFirst && number > 0 ? (
         <div style={boundryStyles} onClick={() => onFisrt()}>
-          {"First Page"}
+          {props.showFirstText?props.showFirstText:"Last Page"}
         </div>
       ) : undefined}
       {number > 0 ? (
@@ -111,7 +111,7 @@ export const Pagination = (props) => {
       ) : undefined}
       {props.showLast && number !== max - 1 ? (
         <div style={boundryStyles} onClick={() => onLast()}>
-          {"Last Page"}
+          {props.showLastText?props.showLastText:"Last Page"}
         </div>
       ) : undefined}
       {props.showIndex ? (
