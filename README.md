@@ -72,34 +72,34 @@ import { Pagination } from "react-custom-pagination";
 ```
 import React, { useState } from "react";
 import "./App.css";
-import { Pagination } from "react-custom-pagination";
+import { Pagination } from "./Pagination";
 
 const App = () => {
   const posts = [
-    { id: "1", name: "user1" },
-    { id: "2", name: "user2" },
-    { id: "3", name: "user3" },
-    { id: "4", name: "user4" },
-    { id: "5", name: "user5" },
-    { id: "6", name: "user6" },
-    { id: "7", name: "user7" },
-    { id: "8", name: "user8" },
-    { id: "9", name: "user9" },
-    { id: "10", name: "user10" },
-    { id: "11", name: "user11" },
-    { id: "12", name: "user12" },
-    { id: "13", name: "user13" },
-    { id: "14", name: "user14" },
-    { id: "15", name: "user15" },
-    { id: "16", name: "user16" },
-    { id: "17", name: "user17" },
-    { id: "18", name: "user18" },
-    { id: "19", name: "user19" },
-    { id: "20", name: "user20" },
+    { id: "1", name: "user 1" },
+    { id: "2", name: "user 2" },
+    { id: "3", name: "user 3" },
+    { id: "4", name: "user 4" },
+    { id: "5", name: "user 5" },
+    { id: "6", name: "user 6" },
+    { id: "7", name: "user 7" },
+    { id: "8", name: "user 8" },
+    { id: "9", name: "user 9" },
+    { id: "10", name: "user 10" },
+    { id: "11", name: "user 11" },
+    { id: "12", name: "user 12" },
+    { id: "13", name: "user 13" },
+    { id: "14", name: "user 14" },
+    { id: "15", name: "user 15" },
+    { id: "16", name: "user 16" },
+    { id: "17", name: "user 17" },
+    { id: "18", name: "user 18" },
+    { id: "19", name: "user 19" },
+    { id: "20", name: "user 20" },
   ];
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(5);
+  const [postsPerPage] = useState(3);
 
   //get current Posts
 
@@ -115,22 +115,40 @@ const App = () => {
 
   return (
     <>
-      <h1>Pagination Example</h1>
-      <div style={{ width: "300px", textAlign: "center" }}>
+      <div
+        style={{
+          width: "500px",
+          textAlign: "center",
+          marginTop: "50px",
+          height: "200px",
+        }}
+      >
+        <h1 style={{ textAlign: "center", color: "green" }}>
+          Pagination Example
+        </h1>
         {currentPosts.map((item) => {
-          return <p key={item.id}>{item.name}</p>;
+          return (
+            <p key={item.id} style={{ color: "red" }}>
+              {item.name}
+            </p>
+          );
         })}
+      </div>
+      <div style={{ width: "500px" }}>
         <Pagination
           totalPosts={posts.length}
           postsPerPage={postsPerPage}
           paginate={paginate}
+          view={5}
+          showLast={true}
+          showFirst={true}
+          showIndex={true}
         />
       </div>
     </>
   );
 };
 export default App;
-
 ```
 
 # Required
@@ -180,8 +198,14 @@ export default App;
 | postsPerPage | Yes      | Number        | ---       | no of posts per page                                     |
 | paginate     | Yes      | function      | ---       | this function will execute when click on paginate number |
 | view         | No       | Number        | 5         | no of paginates                                          |
+| showLabel    | No       | Boolean       | false     | shows the index bar                                      |
+| showFirst    | No       | Boolean       | false     | shows the go to first page button                        |
+| showLast     | No       | Boolean       | false     | shows the go to Last page button                         |
+| showFirstText| No       | String        | "First Page"| text inside show first page button                     |
+| showLastText | No       | String        | "Last Page"| text inside show last page button                       |
 | color        | No       | String        | "white"   | color of the text                                        |
 | bgColor      | No       | String        | "skyblue" | background color                                         |
+| indexbgColor | No       | String        | "tomato"  | background color of index bar                            |
 | selectColor  | No       | String        | "grey"    | background color when selected                           |
 | boxHeight    | No       | String,Number | "40px"    | height                                                   |
 | boxWidth     | No       | String,Number | "40px"    | width                                                    |

@@ -26,7 +26,21 @@ export const Pagination = (props) => {
     setPage(num);
   };
 
+  const onLast = () => {
+    setPage(numberMax);
+    setNumber(max - 1);
+    props.paginate(numberMax);
+  };
+
+  const onFisrt = () => {
+    setPage(1);
+    setNumber(0);
+    props.paginate(1);
+  };
+
   let max = Math.ceil(pageNumbers.length / items);
+
+  let numberMax = Math.max(...pageNumbers);
 
   const spanStyles = {
     display: "flex",
@@ -39,19 +53,21 @@ export const Pagination = (props) => {
     cursor: "pointer",
     borderRadius: props.boxRadius ? props.boxRadius : "50%",
   };
-
-  const selectStyles = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    color: props.color ? props.color : "white",
-    backgroundColor: props.selectColor ? props.selectColor : "gray",
-    width: props.boxWidth ? props.boxWidth : "40px",
-    height: props.boxHeight ? props.boxHeight : "40px",
+  const boundryStyles = {
+    ...spanStyles,
+    width: "auto",
     cursor: "pointer",
-    borderRadius: props.boxRadius ? props.boxRadius : "50%",
+    borderRadius: props.boxRadius ? props.boxRadius : "5%",
+    padding: "0 5px",
   };
-
+  const indexStyles = {
+    ...boundryStyles,
+    backgroundColor: props.indexbgColor ? props.indexbgColor : "tomato",
+  };
+  const selectStyles = {
+    ...spanStyles,
+    backgroundColor: props.selectColor ? props.selectColor : "gray",
+  };
   const mainStyles = {
     display: "flex",
     justifyContent: props.justify ? props.justify : "space-evenly",
@@ -59,9 +75,14 @@ export const Pagination = (props) => {
 
   return (
     <div style={mainStyles}>
+      {props.showFirst && number > 0 ? (
+        <div style={boundryStyles} onClick={() => onFisrt()}>
+          {"First Page"}
+        </div>
+      ) : undefined}
       {number > 0 ? (
         <div onClick={() => onPrevious()} style={spanStyles}>
-          {"<<"}
+          {"<"}
         </div>
       ) : undefined}
       {pageNumbers.slice(number * items, number * items + items).map((num) => {
@@ -85,7 +106,17 @@ export const Pagination = (props) => {
       })}
       {number !== max - 1 ? (
         <div onClick={() => onNext()} style={spanStyles}>
-          {">>"}
+          {">"}
+        </div>
+      ) : undefined}
+      {props.showLast && number !== max - 1 ? (
+        <div style={boundryStyles} onClick={() => onLast()}>
+          {"Last Page"}
+        </div>
+      ) : undefined}
+      {props.showIndex ? (
+        <div style={indexStyles}>
+          {"Page" + " " + page + " " + "of" + " " + numberMax}
         </div>
       ) : undefined}
     </div>
