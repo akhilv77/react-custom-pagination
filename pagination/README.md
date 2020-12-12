@@ -198,7 +198,7 @@ export default App;
 | postsPerPage | Yes      | Number        | ---       | no of posts per page                                     |
 | paginate     | Yes      | function      | ---       | this function will execute when click on paginate number |
 | view         | No       | Number        | 5         | no of paginates                                          |
-| showLabel    | No       | Boolean       | false     | shows the index bar                                      |
+| showIndex    | No       | Boolean       | false     | shows the index bar                                      |
 | showFirst    | No       | Boolean       | false     | shows the go to first page button                        |
 | showLast     | No       | Boolean       | false     | shows the go to Last page button                         |
 | showFirstText| No       | String        | "First Page"| text inside show first page button                     |
