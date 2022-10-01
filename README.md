@@ -21,7 +21,7 @@ Get Responsive and yet simple pagination for React .
 # import
 
 ```
-import { Pagination } from "react-custom-pagination";
+import Pagination from "react-custom-pagination";
 ```
 
 ![pagination](https://user-images.githubusercontent.com/56865356/99876094-82ca4d00-2c1a-11eb-96e5-5fb89d197784.gif)
@@ -72,7 +72,7 @@ import { Pagination } from "react-custom-pagination";
 ```
 import React, { useState } from "react";
 import "./App.css";
-import { Pagination } from "react-custom-pagination";
+import Pagination from "react-custom-pagination";
 
 const App = () => {
   const posts = [
@@ -192,26 +192,26 @@ export default App;
 
 # props
 
-| Name         | Required | Type          | Default   | Description                                              |
-| ------------ | -------- | ------------- | --------- | -------------------------------------------------------- |
-| totalPosts   | Yes      | Number        | ---       | total no of posts                                        |
-| postsPerPage | Yes      | Number        | ---       | no of posts per page                                     |
-| paginate     | Yes      | function      | ---       | this function will execute when click on paginate number |
-| view         | No       | Number        | 5         | no of paginates                                          |
-| showIndex    | No       | Boolean       | false     | shows the index bar                                      |
-| showFirst    | No       | Boolean       | false     | shows the go to first page button                        |
-| showLast     | No       | Boolean       | false     | shows the go to Last page button                         |
-| showFirstText| No       | String        | "First Page"| text inside show first page button                     |
-| showLastText | No       | String        | "Last Page"| text inside show last page button                       |
-| color        | No       | String        | "white"   | color of the text                                        |
-| bgColor      | No       | String        | "skyblue" | background color                                         |
-| indexbgColor | No       | String        | "tomato"  | background color of index bar                            |
-| selectColor  | No       | String        | "grey"    | background color when selected                           |
-| boxHeight    | No       | String,Number | "40px"    | height                                                   |
-| boxWidth     | No       | String,Number | "40px"    | width                                                    |
-| boxRadius | No       | String        | "50%"     | border-radius                                            |
-| indexBorderRadius | No       | String        | "5%"     | border-radius of index tab                          |
-| justify      | No       | String        | "center"  | justify-content                                          |
+| Name              | Required | Type          | Default      | Description                                              |
+| ----------------- | -------- | ------------- | ------------ | -------------------------------------------------------- |
+| totalPosts        | Yes      | Number        | ---          | total no of posts                                        |
+| postsPerPage      | Yes      | Number        | ---          | no of posts per page                                     |
+| paginate          | Yes      | function      | ---          | this function will execute when click on paginate number |
+| view              | No       | Number        | 5            | no of paginates                                          |
+| showIndex         | No       | Boolean       | false        | shows the index bar                                      |
+| showFirst         | No       | Boolean       | false        | shows the go to first page button                        |
+| showLast          | No       | Boolean       | false        | shows the go to Last page button                         |
+| showFirstText     | No       | String        | "First Page" | text inside show first page button                       |
+| showLastText      | No       | String        | "Last Page"  | text inside show last page button                        |
+| color             | No       | String        | "white"      | color of the text                                        |
+| bgColor           | No       | String        | "skyblue"    | background color                                         |
+| indexbgColor      | No       | String        | "tomato"     | background color of index bar                            |
+| selectColor       | No       | String        | "grey"       | background color when selected                           |
+| boxHeight         | No       | String,Number | "40px"       | height                                                   |
+| boxWidth          | No       | String,Number | "40px"       | width                                                    |
+| boxRadius         | No       | String        | "50%"        | border-radius                                            |
+| indexBorderRadius | No       | String        | "5%"         | border-radius of index tab                               |
+| justify           | No       | String        | "center"     | justify-content                                          |
 
 # optional props
 

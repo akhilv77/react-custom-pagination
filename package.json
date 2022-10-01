@@ -1,38 +1,50 @@
 {
   "name": "react-custom-pagination",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
-    "web-vitals": "^0.2.4"
-  },
+  "version": "1.4.5",
+  "description": "A simple and responsive Pagination for React.",
+  "main": "./npm/index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "keywords": [
+    "react-pagination",
+    "react-simple-pagination",
+    "react-responsive-pagination",
+    "responsive-pagination",
+    "pagination",
+    "pagination-react",
+    "pagination-react-js",
+    "react-js-pagination",
+    "pagination",
+    "custom-pagination",
+    "react-custom-pagination",
+    "custom-react-pagination",
+    "paginate",
+    "paginate-js",
+    "react-paginate",
+    "react-cool-pagination",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhilv77/react-custom-pagination.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "Akhil Varma Gadiraju",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akhilv77/react-custom-pagination/issues"
+  },
+  "homepage": "https://github.com/akhilv77/react-custom-pagination#readme",
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.19.3",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "cli": "^1.0.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }
