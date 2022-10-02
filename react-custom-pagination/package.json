@@ -1,0 +1,52 @@
+{
+  "name": "react-custom-pagination",
+  "version": "1.6.8",
+  "description": "A simple and responsive pagination for react.",
+  "main": "./npm/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "react pagination",
+    "react simple pagination",
+    "react responsive pagination",
+    "responsive pagination",
+    "pagination",
+    "pagination react",
+    "pagination react js",
+    "react js pagination",
+    "react-pagination",
+    "custom pagination",
+    "react custom pagination",
+    "custom react pagination",
+    "paginate",
+    "paginate react",
+    "react paginate",
+    "react cool pagination",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhilv77/react-custom-pagination.git"
+  },
+  "author": "Akhil Varma Gadiraju",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akhilv77/react-custom-pagination/issues"
+  },
+  "homepage": "https://github.com/akhilv77/react-custom-pagination#readme",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.19.3",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import "./App.css";
 import Pagination from "react-custom-pagination";
 
-const Example = () => {
+const App = () => {
   const posts = [
     { id: "1", name: "user 1" },
     { id: "2", name: "user 2" },
@@ -75,4 +76,4 @@ const Example = () => {
     </>
   );
 };
-export default Example;
+export default App;

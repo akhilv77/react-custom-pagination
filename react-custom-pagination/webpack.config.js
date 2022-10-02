@@ -1,11 +1,11 @@
 const path = require("path");
-const pkg = require("./package.json");
+
 module.exports = {
   entry: "./src/index.js",
+  mode: "production",
   output: {
     path: path.resolve(__dirname, "npm"),
     filename: "index.js",
-    library: pkg.name,
     libraryTarget: "commonjs2",
   },
   module: {
@@ -22,5 +22,8 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
     ],
+  },
+  externals: {
+    react: "react",
   },
 };
